@@ -2,7 +2,7 @@
 
 namespace Tiime\FacturX;
 
-final readonly class ProfileExtractor
+final class ProfileExtractor
 {
     public static function process(\DOMDocument $document): Profile
     {
