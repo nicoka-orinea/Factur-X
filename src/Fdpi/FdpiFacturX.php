@@ -17,7 +17,7 @@ use Tiime\FacturX\Exception;
 
 class FdpiFacturX extends Fpdi
 {
-    private const string ICC_PROFILE_PATH = __DIR__ . \DIRECTORY_SEPARATOR . 'icc' . \DIRECTORY_SEPARATOR . 'sRGB2014.icc';
+    private const ICC_PROFILE_PATH = __DIR__ . \DIRECTORY_SEPARATOR . 'icc' . \DIRECTORY_SEPARATOR . 'sRGB2014.icc';
     protected array $files                = []; // @phpstan-ignore-line
     protected int $nFiles;
     protected int $outputIntentIndex       = 0;
@@ -46,7 +46,7 @@ class FdpiFacturX extends Fpdi
         $this->PDFVersion = \sprintf('%.1F', $pdfVersion);
 
         if ($binaryData) {
-            $this->PDFVersion .= "\n" . '%' . \chr(rand(128, 256)) . \chr(rand(128, 256)) . \chr(rand(128, 256)) . \chr(rand(128, 256));
+            $this->PDFVersion .= "\n" . '%' . \chr(random_int(128, 255)) . \chr(random_int(128, 255)) . \chr(random_int(128, 255)) . \chr(random_int(128, 255));
         }
     }
 
