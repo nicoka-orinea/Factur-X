@@ -4,12 +4,12 @@ namespace Tiime\FacturX;
 
 final class FacturXAttachment
 {
-    public string $filename;
+    public readonly string $filename;
 
     public function __construct(
-        public string $content,
+        public readonly string $content,
         ?string $filename = null,
-        public string $description = '',
+        public readonly string $description = '',
     ) {
         if ('' === $content) {
             throw new \Exception('Empty content is not allowed for a PDF attachment.');

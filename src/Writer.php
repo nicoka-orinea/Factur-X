@@ -47,7 +47,7 @@ class Writer
      * @throws PdfParserException
      * @throws PdfReaderException
      * @throws PdfTypeException
-     * @throws \DateMalformedStringException
+     * @throws \Exception
      * @throws XsdValidationException
      */
     public function generate(
