@@ -2,15 +2,15 @@
 
 namespace Tiime\FacturX;
 
-final readonly class PdfMetadata
+final class PdfMetadata
 {
     public function __construct(
-        public ?string $author,
-        public ?string $keywords,
-        public ?string $title,
-        public ?string $subject,
-        public ?string $createdDate,
-        public ?string $modifiedDate,
+        public readonly ?string $author,
+        public readonly ?string $keywords,
+        public readonly ?string $title,
+        public readonly ?string $subject,
+        public readonly ?string $createdDate,
+        public readonly ?string $modifiedDate,
     ) {
     }
 }
