@@ -83,7 +83,9 @@ class Writer
         \assert($dateItem instanceof \DOMElement);
         \assert(\is_string($dateItem->nodeValue));
         $dateTime = \DateTime::createFromFormat('Ymd', $dateItem->nodeValue);
-        \assert($dateTime instanceof \DateTime);
+        if (!$dateTime instanceof \DateTime) {
+            throw new Exception(\sprintf('Invalid issue date format in XML: "%s". Expected format Ymd.', $dateItem->nodeValue));
+        }
         $dateTime = $dateTime->setTime(0, 0);
 
         $invoiceIdXpath = $xpath->query('//rsm:ExchangedDocument/ram:ID');
