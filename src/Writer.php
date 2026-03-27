@@ -16,19 +16,19 @@ use Tiime\FacturX\Fdpi\FdpiFacturX;
 class Writer
 {
     public const LOGOS = [
-        Profile::MINIMUM->value  => 'Factur-x-minimum.png',
-        Profile::BASICWL->value  => 'Factur-x-basic-wl.png',
-        Profile::BASIC->value    => 'Factur-x-basic.png',
-        Profile::EN16931->value  => 'Factur-x-en16931.png',
-        Profile::EXTENDED->value => 'Factur-x-extended.png',
+        'minimum'  => 'Factur-x-minimum.png',
+        'basicwl'  => 'Factur-x-basic-wl.png',
+        'basic'    => 'Factur-x-basic.png',
+        'en16931'  => 'Factur-x-en16931.png',
+        'extended' => 'Factur-x-extended.png',
     ];
 
     public const XMP_CONFORMANCE_LEVELS = [
-        Profile::MINIMUM->value  => 'MINIMUM',
-        Profile::BASICWL->value  => 'BASIC WL',
-        Profile::BASIC->value    => 'BASIC',
-        Profile::EN16931->value  => 'EN 16931',
-        Profile::EXTENDED->value => 'EXTENDED',
+        'minimum'  => 'MINIMUM',
+        'basicwl'  => 'BASIC WL',
+        'basic'    => 'BASIC',
+        'en16931'  => 'EN 16931',
+        'extended' => 'EXTENDED',
     ];
 
     protected bool $importExternalLinks;
@@ -83,7 +83,9 @@ class Writer
         \assert($dateItem instanceof \DOMElement);
         \assert(\is_string($dateItem->nodeValue));
         $dateTime = \DateTime::createFromFormat('Ymd', $dateItem->nodeValue);
-        \assert($dateTime instanceof \DateTime);
+        if (!$dateTime instanceof \DateTime) {
+            throw new Exception(\sprintf('Invalid issue date format in XML: "%s". Expected format Ymd.', $dateItem->nodeValue));
+        }
         $dateTime = $dateTime->setTime(0, 0);
 
         $invoiceIdXpath = $xpath->query('//rsm:ExchangedDocument/ram:ID');

@@ -46,7 +46,7 @@ class FdpiFacturX extends Fpdi
         $this->PDFVersion = \sprintf('%.1F', $pdfVersion);
 
         if ($binaryData) {
-            $this->PDFVersion .= "\n" . '%' . \chr(rand(128, 256)) . \chr(rand(128, 256)) . \chr(rand(128, 256)) . \chr(rand(128, 256));
+            $this->PDFVersion .= "\n" . '%' . \chr(random_int(128, 255)) . \chr(random_int(128, 255)) . \chr(random_int(128, 255)) . \chr(random_int(128, 255));
         }
     }
 

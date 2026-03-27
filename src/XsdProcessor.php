@@ -5,11 +5,11 @@ namespace Tiime\FacturX;
 class XsdProcessor
 {
     private const XSD_FILENAMES = [
-        Profile::MINIMUM->value  => 'minimum' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_MINIMUM.xsd',
-        Profile::BASICWL->value  => 'basic-wl' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_BASICWL.xsd',
-        Profile::BASIC->value    => 'basic' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_BASIC.xsd',
-        Profile::EN16931->value  => 'en16931' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_EN16931.xsd',
-        Profile::EXTENDED->value => 'extended' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_EXTENDED.xsd',
+        'minimum'  => 'minimum' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_MINIMUM.xsd',
+        'basicwl'  => 'basic-wl' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_BASICWL.xsd',
+        'basic'    => 'basic' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_BASIC.xsd',
+        'en16931'  => 'en16931' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_EN16931.xsd',
+        'extended' => 'extended' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_EXTENDED.xsd',
     ];
 
     private const XSD_PATH = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'xsd' . \DIRECTORY_SEPARATOR;
