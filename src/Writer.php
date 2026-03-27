@@ -15,20 +15,20 @@ use Tiime\FacturX\Fdpi\FdpiFacturX;
 
 class Writer
 {
-    public const array LOGOS = [
-        Profile::MINIMUM->value  => 'Factur-x-minimum.png',
-        Profile::BASICWL->value  => 'Factur-x-basic-wl.png',
-        Profile::BASIC->value    => 'Factur-x-basic.png',
-        Profile::EN16931->value  => 'Factur-x-en16931.png',
-        Profile::EXTENDED->value => 'Factur-x-extended.png',
+    public const LOGOS = [
+        'minimum'  => 'Factur-x-minimum.png',
+        'basicwl'  => 'Factur-x-basic-wl.png',
+        'basic'    => 'Factur-x-basic.png',
+        'en16931'  => 'Factur-x-en16931.png',
+        'extended' => 'Factur-x-extended.png',
     ];
 
-    public const array XMP_CONFORMANCE_LEVELS = [
-        Profile::MINIMUM->value  => 'MINIMUM',
-        Profile::BASICWL->value  => 'BASIC WL',
-        Profile::BASIC->value    => 'BASIC',
-        Profile::EN16931->value  => 'EN 16931',
-        Profile::EXTENDED->value => 'EXTENDED',
+    public const XMP_CONFORMANCE_LEVELS = [
+        'minimum'  => 'MINIMUM',
+        'basicwl'  => 'BASIC WL',
+        'basic'    => 'BASIC',
+        'en16931'  => 'EN 16931',
+        'extended' => 'EXTENDED',
     ];
 
     protected bool $importExternalLinks;
@@ -47,7 +47,7 @@ class Writer
      * @throws PdfParserException
      * @throws PdfReaderException
      * @throws PdfTypeException
-     * @throws \DateMalformedStringException
+     * @throws \Exception
      * @throws XsdValidationException
      */
     public function generate(
