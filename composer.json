@@ -3,7 +3,7 @@
     "description": "PHP library to manage your Factur-X (PDF invoices files)",
     "type": "library",
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.2",
         "ext-dom": "*",
         "ext-fileinfo": "*",
         "ext-libxml": "*",
