@@ -4,7 +4,7 @@ namespace Tiime\FacturX;
 
 class XsdProcessor
 {
-    private const array XSD_FILENAMES = [
+    private const XSD_FILENAMES = [
         Profile::MINIMUM->value  => 'minimum' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_MINIMUM.xsd',
         Profile::BASICWL->value  => 'basic-wl' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_BASICWL.xsd',
         Profile::BASIC->value    => 'basic' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_BASIC.xsd',
@@ -12,7 +12,7 @@ class XsdProcessor
         Profile::EXTENDED->value => 'extended' . \DIRECTORY_SEPARATOR . 'Factur-X_1.07.3_EXTENDED.xsd',
     ];
 
-    private const string XSD_PATH = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'xsd' . \DIRECTORY_SEPARATOR;
+    private const XSD_PATH = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'xsd' . \DIRECTORY_SEPARATOR;
 
     private string $xsdFilePath;
 

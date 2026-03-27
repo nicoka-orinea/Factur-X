@@ -2,7 +2,7 @@
 
 namespace Tiime\FacturX;
 
-final readonly class PdfMetadata
+final class PdfMetadata
 {
     public function __construct(
         public ?string $author,

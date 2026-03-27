@@ -2,7 +2,7 @@
 
 namespace Tiime\FacturX;
 
-final readonly class FacturXAttachment
+final class FacturXAttachment
 {
     public string $filename;
 

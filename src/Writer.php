@@ -15,7 +15,7 @@ use Tiime\FacturX\Fdpi\FdpiFacturX;
 
 class Writer
 {
-    public const array LOGOS = [
+    public const LOGOS = [
         Profile::MINIMUM->value  => 'Factur-x-minimum.png',
         Profile::BASICWL->value  => 'Factur-x-basic-wl.png',
         Profile::BASIC->value    => 'Factur-x-basic.png',
@@ -23,7 +23,7 @@ class Writer
         Profile::EXTENDED->value => 'Factur-x-extended.png',
     ];
 
-    public const array XMP_CONFORMANCE_LEVELS = [
+    public const XMP_CONFORMANCE_LEVELS = [
         Profile::MINIMUM->value  => 'MINIMUM',
         Profile::BASICWL->value  => 'BASIC WL',
         Profile::BASIC->value    => 'BASIC',

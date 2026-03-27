@@ -17,7 +17,7 @@ use Tiime\FacturX\Exception;
 
 class FdpiFacturX extends Fpdi
 {
-    private const string ICC_PROFILE_PATH = __DIR__ . \DIRECTORY_SEPARATOR . 'icc' . \DIRECTORY_SEPARATOR . 'sRGB2014.icc';
+    private const ICC_PROFILE_PATH = __DIR__ . \DIRECTORY_SEPARATOR . 'icc' . \DIRECTORY_SEPARATOR . 'sRGB2014.icc';
     protected array $files                = []; // @phpstan-ignore-line
     protected int $nFiles;
     protected int $outputIntentIndex       = 0;
